@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/add-edit.css">
+    <link rel="icon" href="./img/logo-1.png" type="image/x-icon"/>
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <title>MOVIEbit</title>
+</head>
+<body>
+    <nav class="navigation-bar">
+        <div class="section-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo-1.png" alt="logo">
+                MOVIE<span>bit</span>
+            </a>
+            <ul class="navigation">
+                <li id="btnLog"      class="hideNavButtons">          <a href="#" class="nav-link">Login</a></li>
+                <li id="btnReg"      class="hideNavButtons last-link"><a href="#" class="nav-link">Register</a></li>
+                <li id="userDisplay" class="hideNavButtons">          <a href="#" class="nav-link" id="userDisplayA"></a></li>
+                <li id="btnLogOut"   class="hideNavButtons last-link"><a href="#" class="nav-link">Logout</a></li>
+            </ul>
+            <div class="burger-menu">
+                <span class="burger-line"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="add-edit-wrapper">
+        <div class="section-container">
+            <h1 id="add-edit-heading" class="add-edit-title">Add / Edit a movie</h1>
+            <div class="inputs-container clearfix">
+                <div class="inputs-container-block">
+                    <div class="input-component">
+                        <label for="title-input">Movie title</label>
+                        <input id="title-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="year-input">Year</label>
+                            <input id="year-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="runtime-input">Runtime</label>
+                            <input id="runtime-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="genre-input">Genre</label>
+                            <input id="genre-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="country-input">Country</label>
+                            <input id="country-input" type="text"></input>
+                    </div>                     
+                </div> <!-- "inputs-container-block" -->
+                <div class="inputs-container-block">
+                    <div class="input-component">
+                            <label for="language-input">Language</label>
+                            <input id="language-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="imdbRating-input">IMDB Rating</label>
+                            <input id="imdbRating-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="imdbVotes-input">IMDB Votes</label>
+                            <input id="imdbVotes-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                            <label for="imdbId-input">IMDB Id</label>
+                            <input id="imdbId-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                        <label for="type-input">Type</label>
+                        <input id="type-input" type="text"></input>
+                    </div>
+                    <div class="input-component">
+                        <label for="uploadPoster-input">Poster Link</label>
+                        <input id="uploadPoster-input" type="text"></input>
+                    </div>
+                </div> <!-- "inputs-container-block" -->
+                <div class="inputs-container-block">
+                    <div class="input-component input-description">
+                            <label for="description-input">Description</label>
+                            <textarea id="description-input"></textarea>
+                            <input id="saveBtn" type="button" value="Save" class="upload-poster"></input>
+                    </div>
+                </div> <!-- "inputs-container-block" -->
+            </div> <!-- class="inputs-container" -->
+        </div>
+    </section> <!-- class="add-edit-wrapper" -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-title">
+                <p class="logo">
+                    <img src="img/logo-1.png" alt="logo">
+                    Movie<span>bit</span>
+                </p>
+                <p >Get your movies bit by bit</p>
+            </div>
+            
+            <div class="footer-social">
+                <div class="footer-social-wrapper">
+                    <a href="#">AH</a>
+                    <a href="https://www.linkedin.com/in/alexandra-ioana-rus-574a28168">AR</a>
+                    <a href="https://www.linkedin.com/in/andrei-filimon-a00897106/">AF</a>
+                    <a href="#">MD</a>
+                    <a href="https://www.linkedin.com/in/radu-maier">RM</a>
+                    <a href="#">TS</a>
+                    <a href="#">ST</a>
+                    <a href="https://linkedin.com/in/samoila-alexandru-gabor-4b6a43172">SG</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© Byte-Actors</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="models/Auth.js"></script>
+    <script src="models/Movie.js"></script>
+    <script src="models/MovieList.js"></script>
+    <script src="views/authView.js"></script>
+    <script src="views/open-menu.js"></script>
+    <script src="views/infoMessage.js"></script>
+    <script src="views/add-edit.js"></script>
+</body>
+
+</html>

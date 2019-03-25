@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="icon" href="./img/logo-1.png" type="image/x-icon"/>
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <title>MOVIEbit</title>
+</head>
+<body>
+    <nav class="navigation-bar">
+        <div class="section-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo-1.png" alt="logo">
+                MOVIE<span>bit</span>
+            </a>
+            <ul class="navigation">
+                <li id="btnLog"      class="hideNavButtons">          <a href="#" class="nav-link">Login</a></li>
+                <li id="btnReg"      class="hideNavButtons last-link"><a href="#" class="nav-link">Register</a></li>
+                <li id="userDisplay" class="hideNavButtons">          <a href="#" class="nav-link" id="userDisplayA"></a></li>
+                <li id="btnLogOut"   class="hideNavButtons last-link"><a href="#" class="nav-link">Logout</a></li>
+            </ul>
+            <div class="burger-menu">
+                <span class="burger-line"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="details-wrapper">
+        <div class="details-poster">
+            <img class="details-poster-img" id="selectedMoviePoster" src="" alt="movie poster" />
+        </div>
+        <div class="details" id="detailed">
+            <div class="section-container">
+                <div class="details-header">
+                    <div class="details-title-and-btns clearfix">
+                        <h1 class="details-title" id="selectedMovieTitle"></h1>
+                        <div class="details-btns">
+                            <a href="add-edit.html">
+                                <button type="" id="edit_btn" class="edit-delete-btns">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                                        <g id="Layer_2" data-name="Layer 2">
+                                        <g id="Layer_1-2" data-name="Layer 1">
+                                        <rect class="cls-1" x="1" y="1" width="33" height="33" rx="16.5"/>
+                                        <path class="cls-2" d="M18.59,12.41l4,4-8.69,8.7-3.57.39a.75.75,0,0,1-.83-.83l.4-3.57Zm6.48-.6L23.19,9.93a1.52,1.52,0,0,0-2.13,0L19.29,11.7l4,4,1.77-1.77A1.52,1.52,0,0,0,25.07,11.81Z"/>
+                                        </g></g>
+                                    </svg>
+                                </button>
+                            </a>
+                            <button type="" id="delete_btn" class="edit-delete-btns">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                                    
+                                    <g id="Layer_2" data-name="Layer 2">
+                                    <g id="Layer_1-2" data-name="Layer 1">
+                                    <rect class="cls-1" x="1" y="1" width="33" height="33" rx="16.5"/>
+                                    <path class="cls-2" d="M9.63,26a2,2,0,0,0,2,2H23.41a2,2,0,0,0,2-2h0V12.25H9.63Zm11.15-10.5a.66.66,0,0,1,.66-.65.65.65,0,0,1,.65.65v9.19a.66.66,0,0,1-.65.66.67.67,0,0,1-.66-.66Zm-3.94,0a.66.66,0,0,1,1.32,0v9.19a.66.66,0,0,1-1.32,0Zm-3.93,0a.65.65,0,0,1,.65-.65.66.66,0,0,1,.66.65v9.19a.67.67,0,0,1-.66.66.66.66,0,0,1-.65-.66ZM26,8.31H21.11l-.39-.76A1,1,0,0,0,19.84,7H15.15a1,1,0,0,0-.87.55l-.39.76H9A.67.67,0,0,0,8.31,9v1.31a.67.67,0,0,0,.66.66H26a.67.67,0,0,0,.66-.66V9A.67.67,0,0,0,26,8.31Z"/>
+                                    </g></g>
+                                </svg>                                
+                            </button>
+                        </div>
+                    </div>
+                    <div class="details-year-genre-time">
+                        <ul class="details-year-genre-time-list clearfix">
+                            <li class="details-year" id="selectedMovieYear"></li>
+                            <li class="details-genre" id="selectedMovieGenre"></li>
+                            <li class="details-time" id="selectedMovieRuntime"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="details-description">
+                    <h1 class="details-description-name">Description</h1>
+                    <div class="description-container">
+                        <p class="details-description-content" id="selectedMovieDescription"></p>
+                    </div>
+                </div>
+                <div class="details-stats clearfix">
+                    <div class="details-group">
+                        <div class="details-type-and-id">
+                            <p id="selectedMovieType"></p>
+                            <p id="selectedMovieImdbID"></p>
+                        </div>
+                        <div class="details-language-and-country">
+                            <p class="" id="selectedMovieLanguage">English</p>
+                            <p class="" id="selectedMovieCountry">USA</p>
+                        </div>
+                    </div>
+                    <div class="details-rating-and-votes">
+                        <p><span id="selectedMovieRating"></span> imdb<span></p>
+                        <p><span id="selectedMovieVotes"></span><span> votes</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="section-container">
+            <div class="footer-title">
+                <p class="logo">
+                    <img src="../img/logo-1.png" alt="logo">
+                    Movie<span>bit</span>
+                </p>
+                <p >Get your movies bit by bit</p>
+            </div>
+            
+            <div class="footer-social">
+                <div class="footer-social-wrapper">
+                    <a href="#">AH</a>
+                    <a href="https://www.linkedin.com/in/alexandra-ioana-rus-574a28168">AR</a>
+                    <a href="https://www.linkedin.com/in/andrei-filimon-a00897106/">AF</a>
+                    <a href="#">MD</a>
+                    <a href="https://www.linkedin.com/in/radu-maier">RM</a>
+                    <a href="#">TS</a>
+                    <a href="#">ST</a>
+                    <a href="https://linkedin.com/in/samoila-alexandru-gabor-4b6a43172">SG</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© Byte-Actors</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="models/Auth.js"></script>
+    <script src="models/Movie.js"></script>
+    <script src="models/MovieList.js"></script>
+    <script src="views/authView.js"></script>
+    <script src="views/open-menu.js"></script>
+    <script src="views/movieDetails.js"></script>
+    <script src="views/infoMessage.js"></script>
+</body>
+
+</html>
